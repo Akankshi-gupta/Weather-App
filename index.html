@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="/images/Haze.jpg" alt="weather-images" id="back-images">
+
+    <div class="container">
+        <div class="search-bar">
+
+            <input type="search" placeholder="Search City" id="search_input" required>
+            <button onclick="searchCity()" id="city"><img src="/images/search.png"></button>
+        </div>
+       
+        <div id="Weather">
+            <span id="temperature">temperature</span>
+            <button onclick="toCelsius()" id="celsius">&deg;C</button>
+            <button onclick="toKelvin()" id="kelvin">&deg;K</button>
+            <button onclick="toFahrenheit()" id="fahrenheit">&deg;F</button><br>
+            <div class="location">
+                <span id="name">City Name: </span>,&nbsp;
+                <span id="country">Country:</span><br>
+            </div>
+            <span id="icon"><img id="wicon" alt="Weather icon"></span><br>
+            <span id="main">Main:</span>
+            <img src="images/sunrise.png" id="rise">
+            <span id="sunrise">sunrise at:</span><br>
+            <img src="/images/sunset.png" id="set">
+            <span id="sunset"> sunset at: </span><br>
+
+        </div>
+        <div id="additional_info">
+            <table class= "table table-responsive">
+                <tr>
+                    <td> Wind </td>
+                    <td id="wind"></td>
+                </tr>
+                <tr>
+                    <td> Humidity </td>
+                    <td id="humidity"></td>
+                </tr>
+                <tr>
+                    <td>Feels Like</td>
+                    <td id="feels_like"></td>
+                </tr>
+                <tr>
+                    <td> Visibility</td>
+                    <td id="visibility"></td>
+                </tr>
+                <tr>
+                    <td> Pressure </td>
+                    <td id="pressure"></td>
+                </tr>
+                <tr>
+                    <td> Rain </td>
+                    <td id="rain"></td>
+                </tr>
+                <tr>
+                    <td> Clouds </td>
+                    <td id="clouds"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
