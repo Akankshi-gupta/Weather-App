@@ -1,5 +1,5 @@
 var UNIT_FLAG = "celsius";
-const apiKey = "YOUR WEATHERMAP API KEY GOES HERE";
+const apiKey = "Your OpenWeatherMap API Key";
 var TEMP;
 function hideButton() {
     var celsius = document.getElementById('celsius');
@@ -107,13 +107,14 @@ function showData(data) {
     icon_data.setAttribute('src', `http://openweathermap.org/img/w/${icon}.png`);
     sunrise_data.textContent = sunrise;
     sunset_data.textContent = sunset;
-    wind_data.textContent = wind;
-    humidity_data.textContent = humidity;
-    feels_like_data.textContent = feels_like;
-    visibility_data.textContent = visibility;
-    pressure_data.textContent = pressure;
-    rain_data.textContent = rain != undefined ? rain : "";
-    clouds_data.textContent = clouds;
+    wind_data.textContent = `${wind} m/s `;
+    humidity_data.textContent = `${humidity} %`;
+    feels_like_data.textContent = `${feels_like} k`;
+    visibility_data.textContent = `${visibility} km`;
+    pressure_data.textContent = `${pressure} hPa`;
+    rain_data.textContent = rain   ? `${rain} mm` : "0 mm";
+    console.log(rain);
+    clouds_data.textContent = `${clouds} %`;
 
 
 
@@ -234,8 +235,8 @@ function setBackground(weatherType) {
 
 
 async function makeRequest(url) {
-    /* let response = await fetch(url);
+   /*  let response = await fetch(url);
     let json_format = await response.json();
     return json_format; */
-}
+} 
 
