@@ -235,8 +235,8 @@ function setBackground(weatherType) {
 
 
 async function makeRequest(url) {
-   /*  let response = await fetch(url);
+    let response = await fetch(url);
     let json_format = await response.json();
-    return json_format; */
+    return json_format; 
 } 
 
